@@ -1,0 +1,76 @@
+\documentclass[11pt]{scrartcl}
+%Gummi|061|=)
+\title{\textbf{RV Blind Tests}}
+\subtitle{File Naming Convention 0.1}
+\date{}
+
+\usepackage[top=0.5in, left=0.8in, bottom=1in, right=0.8in]{geometry}
+
+\begin{document}
+
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Preliminary remarks}
+
+Every data file in the \texttt{data-sets} repository must have extension \textbf{\texttt{.dat}} and be a standard ASCII file with three columns, corresponding to Julian day, radial velocity and uncertainty in radial velocity:
+
+\paragraph{file.dat} ~\\
+\vskip1ex
+\begin{tabular}[]{ccc}
+jdb & vrad & svrad \\
+\ldots & \ldots & \ldots \\
+\end{tabular}
+\vskip2ex
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Naming}
+
+\paragraph{Authors} ~\\
+\vskip-1ex
+\begin{tabular}[]{rcc}
+Alexandre Santerne & -- & A \\
+Carlos Correia     & --	& C \\
+Jo\~ao Faria     & --	& J \\
+Nuno Santos     & --	& N \\
+Pedro Figueira     & --	& P \\
+\end{tabular}
+\vskip2ex
+
+\paragraph{Types of noise included (3 characters long, leading dots)} ~\\
+\vskip-1ex
+\begin{tabular}[]{rcl}
+Only white noise & -- & ..w \\
+Only red noise & -- & ..r \\
+Red and white noise & -- & .rw / .wr \\
+other type & -- & 	o.. / o.r / o.w / orw \\
+\end{tabular} 
+\vskip2ex
+
+
+\paragraph{Has stellar activity? (leading dot)} ~\\
+\vskip-1ex
+\begin{tabular}[]{rcl}
+Yes & -- & .sa \\
+No & -- & nsa \\
+\end{tabular}
+\vskip2ex
+
+\paragraph{Numbering (2 digits, leading dots)} ~ \\
+\vskip-1ex
+.1 / .6 / 10 / 13 / 99
+\vskip2ex
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Examples}
+
+\paragraph{} ~\\
+\vskip-4ex
+\begin{tabular}[]{rcl}
+A..w.sa.1.dat & -- & created by Alexandre, only white noise, with stellar activity, system \#1 \\
+A.rw.sa.4.dat & -- & created by Alexandre, red and white noise, with stellar activity, system \#4 \\
+Po..nsa23.dat & -- & created by Pedro, other type of noise, no stellar activity, system \#23 \\
+\end{tabular}
+
+\end{document}
